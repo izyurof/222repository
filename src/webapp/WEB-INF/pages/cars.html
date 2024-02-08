@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Пример таблицы с границами в Thymeleaf</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 45%;
+            }
+
+            th, td {
+                border: 2px solid black;
+                padding: 3px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Mileage</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.model}">Model</td>
+        <td th:text="${car.year}">Year</td>
+        <td th:text="${car.mileage}">Mileage</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
