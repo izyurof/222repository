@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Машины</title>
+    <h3>
+        <p style="margin-left: 350px;">Таблица машин</p>
+    </h3>
+
     <head>
         <meta charset="UTF-8"/>
-        <title>Пример таблицы с границами в Thymeleaf</title>
         <style>
             table {
                 border-collapse: collapse;
@@ -27,16 +30,16 @@
 <table>
     <thead>
     <tr>
-        <th>Model</th>
-        <th>Year</th>
-        <th>Mileage</th>
+        <th>Модель</th>
+        <th>Год выпоска</th>
+        <th>Пробег</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="car : ${cars}">
-        <td th:text="${car.model}">Model</td>
-        <td th:text="${car.year}">Year</td>
-        <td th:text="${car.mileage}">Mileage</td>
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.year}"></td>
+        <td th:text="${car.mileage}"></td>
     </tr>
     </tbody>
 </table>
