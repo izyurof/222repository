@@ -1,6 +1,6 @@
 package web.controller;
 
-import Service.CarServiceImpl;
+import Service.CarService;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @ComponentScan("Service")
 public class CarsController {
-    private final CarServiceImpl carService;
-    public CarsController(CarServiceImpl carService) {
+    private final CarService carService;
+    public CarsController(CarService carService) {
         this.carService = carService;
     }
 
