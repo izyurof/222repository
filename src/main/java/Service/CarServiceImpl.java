@@ -1,11 +1,12 @@
 package Service;
 
 import Model.Car;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
+@Component
 public class CarServiceImpl implements CarService {
     private final List<Car> CARS =
             new ArrayList<>(List.of(
